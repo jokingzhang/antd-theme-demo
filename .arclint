@@ -1,0 +1,10 @@
+{
+  "linters": {
+    "jsx": {
+      "type": "script-and-regex",
+      "script-and-regex.script": "sh -c 'eslint -f compact \"$0\" || true'",
+      "script-and-regex.regex": "(^((?P<file>.+): line (?P<line>[0-9]+), col (?P<col>[0-9]+), (?P<severity>[^\\-]*) - (?P<message>.*) \\((?P<name>[a-z\\-]+)\\))$)m",
+      "include": "/app\\/.*\\.(js|jsx)$/"
+    }
+  }
+}

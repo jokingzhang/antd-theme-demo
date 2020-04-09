@@ -1,0 +1,113 @@
+@import '../../style/index.less';
+@import '~antd/es/style/themes/default.less';
+
+@dantd-table-prefix-cls: ~'@{dantd-prefix}-table';
+
+.@{dantd-table-prefix-cls} {
+  &-header {
+    &-title {}
+    &-search {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-bottom: 5px;
+      &-loadbtn {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 5px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+    &-custom {
+      margin-bottom: 10px;
+    }
+    &-filter {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 10px;
+      padding: 0;
+  
+      &-line {
+        display: flex;
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        text-align: left;
+        align-items: center;
+  
+        &-item {
+          margin-left: 10px;
+          margin-top: 5px;
+
+          > button.table-header-item-btn {
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > h1,h2,h3,h4,h5,h6,p,pre {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+  
+      &-left {
+        display: flex;
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        text-align: left;
+        align-items: flex-end;
+        max-width: 50%;
+  
+        &-minh {
+          min-height: 37px;
+        }
+      }
+
+      &-right {
+        display: flex;
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        text-align: right;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 50%;
+  
+        &-item {
+          margin-top: 5px;
+          margin-left: 10px;
+  
+          > button.table-header-item-btn {
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > h1,h2,h3,h4,h5,h6,p,pre {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-table {
+    &-wrapper {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+  
+    &-content {
+      min-width: fit-content;
+      width: auto;
+      padding: 15px;
+      border: 1px solid #e8e8e8;
+      border-radius: 2px;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '~antd/lib/style/themes/default.less';
+// @import '~antd/dist/antd.less';
+// @import './customer/variables.less';
+
+@header-icon-font-size: 18px;
+@header-icon-line-height: 64px;
+@header-icon-padding: 0 24px;
+.ant-back-top-icon {
+  background-size: contain;
+}
+
+.app {
+  &-content {
+    margin: 24px 18px;
+    padding: 24px;
+    background: #fff;
+  }
+
+  .icon-trigger {
+    font-size: @header-icon-font-size;
+    line-height: @header-icon-line-height;
+    padding: @header-icon-padding;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .icon-theme {
+    font-size: @header-icon-font-size;
+    line-height: @header-icon-line-height;
+    padding: @header-icon-padding;
+    float: right;
+  }
+
+  .icon-trigger:hover {
+    color: #1890ff;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: 40px;
+      margin: 16px 0 16px 22px;
+      margin-right: 0;
+    }
+    h3 {
+      overflow: hidden;
+      margin-bottom: 3px;
+      font-size: 14px;
+      opacity: 1;
+      transition: all 1s;
+    }
+  }
+
+  .ant-layout-sider-collapsed {
+    .logo {
+      margin: 16px 20px;
+      margin-right: 0;
+    }
+    .logo-wrapper {
+      h3 {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+}

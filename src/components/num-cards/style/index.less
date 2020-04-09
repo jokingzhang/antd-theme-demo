@@ -1,0 +1,201 @@
+@import '../../style/index.less';
+
+@num-cards-prefix-cls: ~'@{dantd-prefix}-num-cards';
+
+.@{num-cards-prefix-cls} {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-default {
+    &-item {
+      background: #EFF2F6;
+      flex: 0 1 auto;
+      width: 250px;
+      min-height: 102px;
+      border-radius:2px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 17px 0 16px 20px;
+      position: relative;
+
+      &:hover {
+        box-shadow: 0 0 2px rgba(106,137,192,1);
+      }
+
+      &:active {
+        box-shadow: 0 0 2px rgba(106,137,192,1);
+      }
+
+      &-title {
+        color: #262626;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 6px;
+        font-size: 12px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        position: relative;
+      }
+   
+      &-centre {
+        height: 42px;
+        overflow: hidden;
+
+        &-content {
+          display: inline-block;
+          color: #333333;
+          min-width: 147px;
+          height: 42px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 28px;
+          font-family:DINAlternate-Bold,DINAlternate;
+          font-weight: bold;
+          margin-right: 24px;
+        }  
+  
+        &-fractional {
+          display: inline-block;
+          color: #8C8C8C;
+          height: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          font-family:DINAlternate-Bold,DINAlternate;
+          margin-top: 11px;
+          margin-bottom: 11px;
+        }
+        .item-theme-text-success {
+          color: @success-color;
+        }
+        .item-theme-text-info {
+          color: @info-color;
+        }
+        .item-theme-text-default {
+          color: @normal-color;
+        }
+        .item-theme-text-error {
+          color: @error-color;
+        }
+        .item-theme-text-warning {
+          color: @warning-color;
+        }
+      }
+
+      &-bottomContent {
+        min-height:20px;
+        font-size:12px;
+        margin-top: 6px;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(140,140,140,1);
+        line-height:20px;
+      }
+      &-span {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width:83px;
+        height:102px;
+        z-index: 0;
+        // overflow: hidden;
+        
+        &-top {
+          position: absolute;
+          right: -20px;
+          top: -12px;
+          width:73px;
+          height:73px;
+          border-radius:50%;
+          background:rgba(255,255,255,1);
+          opacity:0.2;
+        }
+        &-bottom {
+          position: absolute;
+          right: 0%;
+          bottom: 0%;
+          width:83px;
+          height:62px;
+          background:rgba(255,255,255,1);
+          opacity:0.2;
+          border-radius:90% 10%/5% 0 0;
+        }
+      }
+    }
+  }
+  &-grade {
+    &-item {
+      background: #EFF2F6;
+      display: flex;
+      flex: 0 1 auto;
+      width: 346px;
+      height: 102px;
+      border-radius:2px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 10px 0 10px 10px;
+
+      &-percent{
+        width:82px;
+        height:82px;
+        // opacity:0.6;
+        border-radius:50%;
+        border:1px solid rgba(255,255,255,1);
+
+        &-percentNum{
+          width:82px;
+          height:42px;
+          text-align: center;
+          font-size:28px;
+          font-family:DINAlternate-Bold,DINAlternate;
+          font-weight:bold;
+          color:rgba(255,255,255,1);
+          line-height:42px;
+          margin: 20px 0;
+        }
+      }
+
+      &-centre {
+        margin: 15px 0 0 30px;
+
+        &-title {
+          width:96px;
+          height:22px;
+          font-size:14px;
+          font-family:PingFangSC-Semibold,PingFang SC;
+          font-weight:600;
+          color:rgba(255,255,255,1);
+          line-height:22px;
+        }
+  
+        &-content {
+          width:204px;
+          height:20px;
+          font-size:12px;
+          font-family:PingFangSC-Regular,PingFang SC;
+          font-weight:400;
+          color:rgba(255,255,255,1);
+          line-height:20px;
+          margin-top: 10px;
+          overflow: hidden;
+        }
+      }
+
+    }
+  }
+
+  .item-theme-success {
+    background-color: @success-color;
+  }
+  .item-theme-info {
+    background-color: @info-color;
+  }
+  .item-theme-default {
+    background-color: @normal-color;
+  }
+  .item-theme-error {
+    background-color: @error-color;
+  }
+  .item-theme-warning {
+    background-color: @warning-color;
+  }
+}
