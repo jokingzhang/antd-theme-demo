@@ -25,7 +25,7 @@ const Home = () => {
       <h3> 组件平台 </h3>
       <EmptyLine />
       <Row>
-        <Col className="hello-primary-wrapper" span={20}>
+        <Col className="hello-wrapper" span={20}>
           <Meta
             avatar={<Avatar style={{ marginTop: 5 }} size="large" src={img} />}
             title={`${hello}，祝你开心每一天`}

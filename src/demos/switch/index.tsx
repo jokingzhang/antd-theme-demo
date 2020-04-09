@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
-import { Switch, EmptyLine } from 'components';
+import { EmptyLine } from 'components';
+import { Switch } from 'antd-v3-simple-switch';
 import './style.less';
 
 const demo = () => {
@@ -15,10 +16,6 @@ const demo = () => {
     <div>
       <div className="p-switch-wrapper">
         <Switch size="small" />
-      </div>
-      <EmptyLine />
-      <div className="p-switch-wrapper">
-        <Switch />
       </div>
       <EmptyLine />
       <div className="p-switch-wrapper">
