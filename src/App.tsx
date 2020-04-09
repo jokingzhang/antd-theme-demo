@@ -3,7 +3,7 @@ import { Modal, Layout, Menu, Icon, message, ConfigProvider } from 'antd';
 // import { Switch, Route, withRouter, NavLink, RouteProps } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { Switch, Route, withRouter, NavLink, RouteProps } from 'react-router-dom';
-import { Switch as DantdSwitch } from '@didi/dantd';
+import { Switch as DantdSwitch } from 'components';
 import _ from 'lodash';
 import NotFound from 'pages/NotFound';
 import antdZhCN from 'antd/es/locale/zh_CN';

@@ -25,13 +25,20 @@ const Home = () => {
       <h3> 组件平台 </h3>
       <EmptyLine />
       <Row>
-        <Col span={20}>
+        <Col className="hello-primary-wrapper" span={20}>
           <Meta
             avatar={<Avatar style={{ marginTop: 5 }} size="large" src={img} />}
             title={`${hello}，祝你开心每一天`}
             description="消除恐惧的最好办法就是面对恐惧！坚持，才是胜利。加油！奥利给！"
           />
         </Col>
+        {/* <Col className="hello-normal-wrapper" span={20}>
+          <Meta
+            avatar={<Avatar style={{ marginTop: 5 }} size="large" src={img} />}
+            title={`${hello}，祝你开心每一天`}
+            description="消除恐惧的最好办法就是面对恐惧！坚持，才是胜利。加油！奥利给！"
+          />
+        </Col> */}
         <Col style={{ marginTop: -13 }} span={4}>
           <Statistic
             title="当前组件总数"
