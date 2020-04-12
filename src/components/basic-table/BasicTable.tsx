@@ -5,14 +5,7 @@ import Highlighter from 'react-highlight-words';
 import _ from 'lodash';
 import { useDebounce } from '../hooks';
 import { TableProps, ColumnProps } from 'antd/lib/table';
-import {
-  pageSizeOptions,
-  paginationLocale,
-  sorterNames,
-  TSorterNames,
-  locale,
-  showTotal,
-} from './config';
+import { pageSizeOptions, sorterNames, TSorterNames, locale, showTotal } from './config';
 
 // 过滤，搜索不可以同时使用
 
@@ -693,6 +686,7 @@ function BasicTable<T>(props: IBasicTableProps<T>) {
       <Row className={`${prefixCls}-table-wrapper`}>
         <div className={`${prefixCls}-table-content`}>
           <Table
+            rowKey="dataIndex"
             loading={loading}
             columns={renderColumns()}
             dataSource={dataSource}

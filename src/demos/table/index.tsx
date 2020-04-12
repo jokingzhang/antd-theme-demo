@@ -2,17 +2,17 @@
 import React from 'react';
 import { Tabs, Table } from 'antd';
 import { BasicTable } from 'components';
-import { columns, data as tableData } from './config';
+import { columns, data as tableData, commonData, commonColumns } from './config';
 const { TabPane } = Tabs;
 
 const TableDemo = props => {
   return (
     <div>
-      <Tabs defaultActiveKey="2">
+      <Tabs defaultActiveKey="1">
         <TabPane tab="普通Table" key="1">
           <Table
-            columns={columns}
-            dataSource={tableData}
+            columns={commonColumns}
+            dataSource={commonData}
             pagination={{
               size: 'small',
               showSizeChanger: true,
