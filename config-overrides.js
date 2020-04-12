@@ -3,7 +3,7 @@ const {
   override,
   fixBabelImports,
   addLessLoader,
-  addBabelPlugins,
+  setWebpackPublicPath,
   addWebpackPlugin,
 } = require('customize-cra');
 const AntDesignThemePlugin = require('antd-theme-webpack-plugin');
@@ -30,5 +30,6 @@ module.exports = override(
     // },
     javascriptEnabled: true,
   }),
+  setWebpackPublicPath(process.env.NODE_ENV === 'production' && '/antd-theme-demo'),
   addWebpackPlugin(new AntDesignThemePlugin(options)),
 );

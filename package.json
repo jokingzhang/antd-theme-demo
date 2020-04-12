@@ -1,8 +1,8 @@
 {
-  "name": "dantd-demo",
+  "name": "antd-theme-demo",
   "version": "0.0.1",
   "description": "react components by antdv3",
-  "author": "zhangbx <zhangbx@didiglobal.com>",
+  "author": "zhangbx <496691544@qq.com>",
   "license": "MIT",
   "keywords": [
     "ant-design",
@@ -18,10 +18,15 @@
     "node": ">=8",
     "npm": ">=5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokingzhang/antd-theme-demo.git"
+  },
   "scripts": {
-    "start": "PORT=3066 react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "jest --no-cache --watch"
+    "start": "PORT=3067 react-app-rewired start",
+    "build": "react-app-rewired build && node ./scripts/publish.js",
+    "test": "jest --no-cache --watch",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [

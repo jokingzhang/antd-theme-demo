@@ -8,7 +8,7 @@ const { TabPane } = Tabs;
 const TableDemo = props => {
   return (
     <div>
-      <Tabs defaultActiveKey="1">
+      <Tabs defaultActiveKey="2">
         <TabPane tab="普通Table" key="1">
           <Table
             columns={columns}
