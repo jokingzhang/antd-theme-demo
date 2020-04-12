@@ -160,7 +160,6 @@ function BasicTable<T>(props: IBasicTableProps<T>) {
     }
     return result;
   }, [props.columns]);
-
   const [columnsState, columnsDispatch] = useReducer(columnsReducer, columnsMap);
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
@@ -355,9 +354,8 @@ function BasicTable<T>(props: IBasicTableProps<T>) {
             value,
           };
         });
-        currentItem.filterIcon = (filtered: any) => (
-          <Icon data-testid="icon-filter" type="filter" />
-        );
+
+        currentItem.filterIcon = () => <Icon data-testid="icon-filter" type="filter" />;
         currentItem.filteredValue = columnsState[columnItem.dataIndex as string].value;
         currentItem.onFilter = (value, record: any) => {
           if (currentItem.dataIndex && record[currentItem.dataIndex]) {
@@ -400,9 +398,7 @@ function BasicTable<T>(props: IBasicTableProps<T>) {
 
       // Search
       if (currentItem.commonSearch) {
-        currentItem.filterIcon = (filtered: any) => (
-          <Icon data-testid="icon-search" type="search" />
-        );
+        currentItem.filterIcon = () => <Icon data-testid="icon-search" type="search" />;
 
         currentItem.onFilterDropdownVisibleChange = (visible: boolean) => {
           if (visible && filterSearchInputRef.current && filterSearchInputRef.current.select) {
@@ -509,7 +505,7 @@ function BasicTable<T>(props: IBasicTableProps<T>) {
           };
         }
       }
-
+      console.info(currentItem);
       return currentItem;
     });
   }, [
@@ -710,7 +706,6 @@ function BasicTable<T>(props: IBasicTableProps<T>) {
               showTotal: showTotal,
               showSizeChanger: true,
               pageSizeOptions: pageSizeOptions,
-              locale: paginationLocale,
             }}
             {...props.antProps}
           />

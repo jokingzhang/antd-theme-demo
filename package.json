@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "PORT=3067 react-app-rewired start",
-    "build": "react-app-rewired build && node ./scripts/publish.js",
+    "build": "rm -rf build && react-app-rewired build && node ./scripts/publish.js",
     "test": "jest --no-cache --watch",
     "deploy": "gh-pages -d build"
   },
@@ -103,18 +103,6 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.0",
     "typescript": "^3.7.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && tsc"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,tsx}": [
-      "eslint --fix src/**/*.{ts,tsx}",
-      "jest --bail --coverage --findRelatedTests",
-      "git add ."
-    ]
   },
   "sideEffects": [
     "dist/*",
