@@ -73,7 +73,7 @@
     "jest-fetch-mock": "^3.0.3",
     "jest-html-reporter": "^2.8.0",
     "klaw-sync": "^6.0.0",
-    "less": "^2.7.2",
+    "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "lint-staged": "^9.5.0",
     "lodash": "^4.17.15",
